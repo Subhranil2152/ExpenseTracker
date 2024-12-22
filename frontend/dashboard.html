@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">Your Buddy Tracker</div>
+        <div class="nav-links" id="navLinks">
+            <a href="about.html">About</a>
+            <a href="login.html" onclick="logout()">Logout</a>
+        </div>
+        <div class="nav-toggle" onclick="toggleNav()">&#9776;</div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h2>Welcome, <span id="usernameDisplay"></span>!</h2>
+            <h3>Current Balance: <span id="currentBalance"></span></h3>
+
+            <h3>Add Transaction</h3>
+            <form id="transactionForm">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                <label for="type">Type:</label>
+                <select id="type" name="type" required>
+                    <option value="credit">Credit</option>
+                    <option value="debit">Debit</option>
+                </select>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="comment">Comment:</label>
+                <input type="text" id="comment" name="comment">
+                <button type="button" onclick="addTransaction()">Add Transaction</button>
+            </form>
+
+            <h3>Transactions</h3>
+            <ul id="transactionList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+h2, h3 {
+    color: #f0f0f0;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #1c86ee;
+    transform: scale(1.05);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, button {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 8px 16px; 
+    border-radius: 5px;
+    font-size: 14px;  
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1c86ee;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1a78d7;
+    transform: scale(1);
+}
+
+#loginStatus, #registerStatus {
+    color: red;
+}
+
+#transactionList li {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+}
+
+.credit {
+    color: green;
+}
+
+.debit {
+    color: red;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.nav-title {
+    font-size: 1.5em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1e90ff;
+    transform: scale(1.05);
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid #444;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.card h2, .card h3 {
+    margin-top: 0;
+}
+
+.card form {
+    margin-top: 20px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

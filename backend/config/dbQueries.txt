@@ -1,0 +1,29 @@
+USE expense_tracker;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(80) NOT NULL UNIQUE,
+    password VARCHAR(120) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    amount FLOAT NOT NULL,
+    type VARCHAR(10) NOT NULL,  -- 'credit' or 'debit'
+    date DATETIME NOT NULL,
+    comment VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+INSERT INTO users (username, password) VALUES
+('bob', 'password123'),
+('bob1', 'password456');
+
+INSERT INTO transactions (user_id, amount, type, date, comment) VALUES
+(1, 1000.00, 'credit', '2024-12-01', 'Salary'),
+(1, 200.00, 'debit', '2024-12-02', 'Groceries'),
+(2, 1500.00, 'credit', '2024-12-01', 'Freelance Work'),
+(2, 300.00, 'debit', '2024-12-03', 'Rent');
